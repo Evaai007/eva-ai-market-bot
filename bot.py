@@ -58,10 +58,8 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
 • GCP
 • Oracle
 • Azure
-"""
-
-   elif data == "prices":
-    text = """💎 EVA AI MARKET
+    elif data == "prices":
+        text = """💎 EVA AI MARKET
 ━━━━━━━━━━━━━━━━━━━━
 
 🤖 AI ACCOUNTS
@@ -94,19 +92,10 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
   ├ 3 Months ─ $25
   ├ 6 Months ─ $45
   └ 12 Months ─ $80
-  ✔ Full Warranty
 
 ━━━━━━━━━━━━━━━━━━━━
-"""☁️ AWS CLOUD
 
-Bedrock Claude AI Opus
-
-✅ Working Normally
-✅ Opus 4.6
-✅ Opus 4.7
-✅ Opus 4.8
-
-Standard vCPU
+☁️ AWS CLOUD
 
 • 8 vCPU ─ $30
 • 16 vCPU ─ $50
@@ -115,33 +104,13 @@ Standard vCPU
 • 256 vCPU ─ $180
 • 512 vCPU ─ $250
 
-━━━━━━━━━━━━━━━━━━━━
-
-🚀 PREMIUM AWS INVENTORY
-
-• 64 vCPU │ 10K RPM ─ $140
-• 96 vCPU │ 10K RPM ─ $180
-• 128 vCPU │ 10K RPM ─ $300
-• 256 vCPU │ 10K RPM ─ $500
-• 512 vCPU │ 10K RPM │ USA IP ─ $250
-• 10K RPM │ Random IP ─ $80
-• 1280 vCPU │ 10K RPM │ Old Account ─ $1100
-• 384 vCPU │ Old Account ─ $2500
-
-━━━━━━━━━━━━━━━━━━━━
-
 💳 AWS CREDITS
 
-• $300 AWS
 • $1,000 Credits ─ $120
 • $5,000 Credits ─ $500
 • $10,000 Credits ─ $700
 
-━━━━━━━━━━━━━━━━━━━━
-
 ☁️ GCP
-
-Available:
 
 • GCP $300
 • GCP $5,000
@@ -149,75 +118,48 @@ Available:
 • GCP $50,000
 • GCP $100,000
 
-✅ Tier 3 AI Studio Billing
-✅ Gemini Supported
-✅ Cloud Run Ready
-
-━━━━━━━━━━━━━━━━━━━━
-
-☁️ CLOUD SERVICES
-
-• Oracle $300 PAYG
-• Oracle London ─ $25
-• Oracle Stockholm ─ $25
-
-• Azure PAYG ─ $20
-• Azure Plans ─ $8 / $10 / $12
-
-• DigitalOcean $200 (1 Year)
-• Vultr $300 Credit ─ $12
-• Linode $1000 Old Account
-• OVH Free Trial ─ $12
-• OVH 34 vCPU ─ $15
-• UpCloud ─ $12 / $18
-• Kamatera ─ $12
-
-━━━━━━━━━━━━━━━━━━━━
-
-💼 BUSINESS
-
-✔ Long-Term Orders Accepted
-✔ Bulk Orders Available
-✔ Fast Delivery
-✔ Professional Support
-✔ Worldwide Service
-
 📩 Contact: @eva007_8
-
 🔥 IN STOCK • INSTANT DELIVERY
-
+"""
 
     elif data == "payment":
         text = """💳 PAYMENT METHODS
 
-USDT TRC20:
+USDT (TRC20)
 TJCFS6hDKsEnquGuvw43krk141QLvHnGbG
 
-USDT BEP20:
+USDT (BEP20)
 0x644ed89caecc120d3a3180e9f20a90d970cfa3e8
 
-After payment contact admin.
-"""
-
-    elif data == "order":
+After payment, send the transaction ID to the     elif data == "order":
         text = """📦 ORDER PROCESS
 
-1. Select product
-2. Contact Admin
+1. Select your product
+2. Contact the admin
 3. Complete payment
-4. Receive service
+4. Receive your service
 
-👨‍💻 @eva007_8
+👨‍💻 Admin: @eva007_8
 """
 
     elif data == "contact":
-        text = "👨‍💻 Contact Admin\n\nTelegram: @eva007_8"
+        text = """👨‍💻 CONTACT ADMIN
+
+Telegram:
+@eva007_8
+"""
 
     elif data == "channel":
-        text = "📢 Official Channel\n\nhttps://t.me/evacloudhub247"
+        text = """📢 OFFICIAL CHANNEL
+
+https://t.me/evacloudhub247
+"""
 
     elif data == "reviews":
-        text = "⭐ Customer Reviews\n\nhttps://t.me/AWSXCLOUDEBUYSELL"
+        text = """⭐ CUSTOMER REVIEWS
+
+https://t.me/AWSXCLOUDEBUYSELL
+"""
 
     else:
         text = "Please choose an option."
@@ -226,11 +168,15 @@ After payment contact admin.
 
 
 def main():
+    if not BOT_TOKEN:
+        raise ValueError("BOT_TOKEN environment variable is not set.")
+
     app = Application.builder().token(BOT_TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button))
 
+    print("Bot is running...")
     app.run_polling()
 
 
