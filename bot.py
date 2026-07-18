@@ -60,8 +60,132 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
 • Azure
 """
 
-    elif data == "prices":
-        text = "💸 Price List is loading..."
+   elif data == "prices":
+    text = """💎 EVA AI MARKET
+━━━━━━━━━━━━━━━━━━━━
+
+🤖 AI ACCOUNTS
+
+• Claude Pro ─ 15 USDT │ 15 Days
+• Claude Max 5 ─ 35 USDT
+• Claude Max 20 ─ 80 USDT
+• Claude Max 20 (365 Days) ─ 150 USDT
+
+👑 GPT
+
+• GPT Pro ─ 140 USDT │ 1 Year Warranty
+• GPT Plus (GPT-4o) ─ 130 USDT
+
+✨ AI TOOLS
+
+• Gemini Ultra / Veo 3
+  ├ Warranty ─ $15
+  └ No Warranty ─ $7
+
+• Super Grok ─ $100
+  └ 1 Year Warranty
+
+• Kling Pro ─ $15
+  ├ 4500 Credits
+  └ 5 Days Warranty
+
+• CapCut Pro
+  ├ 1 Month ─ $8
+  ├ 3 Months ─ $25
+  ├ 6 Months ─ $45
+  └ 12 Months ─ $80
+  ✔ Full Warranty
+
+━━━━━━━━━━━━━━━━━━━━
+"""☁️ AWS CLOUD
+
+Bedrock Claude AI Opus
+
+✅ Working Normally
+✅ Opus 4.6
+✅ Opus 4.7
+✅ Opus 4.8
+
+Standard vCPU
+
+• 8 vCPU ─ $30
+• 16 vCPU ─ $50
+• 64 vCPU ─ $80
+• 128 vCPU ─ $100
+• 256 vCPU ─ $180
+• 512 vCPU ─ $250
+
+━━━━━━━━━━━━━━━━━━━━
+
+🚀 PREMIUM AWS INVENTORY
+
+• 64 vCPU │ 10K RPM ─ $140
+• 96 vCPU │ 10K RPM ─ $180
+• 128 vCPU │ 10K RPM ─ $300
+• 256 vCPU │ 10K RPM ─ $500
+• 512 vCPU │ 10K RPM │ USA IP ─ $250
+• 10K RPM │ Random IP ─ $80
+• 1280 vCPU │ 10K RPM │ Old Account ─ $1100
+• 384 vCPU │ Old Account ─ $2500
+
+━━━━━━━━━━━━━━━━━━━━
+
+💳 AWS CREDITS
+
+• $300 AWS
+• $1,000 Credits ─ $120
+• $5,000 Credits ─ $500
+• $10,000 Credits ─ $700
+
+━━━━━━━━━━━━━━━━━━━━
+
+☁️ GCP
+
+Available:
+
+• GCP $300
+• GCP $5,000
+• GCP $25,000
+• GCP $50,000
+• GCP $100,000
+
+✅ Tier 3 AI Studio Billing
+✅ Gemini Supported
+✅ Cloud Run Ready
+
+━━━━━━━━━━━━━━━━━━━━
+
+☁️ CLOUD SERVICES
+
+• Oracle $300 PAYG
+• Oracle London ─ $25
+• Oracle Stockholm ─ $25
+
+• Azure PAYG ─ $20
+• Azure Plans ─ $8 / $10 / $12
+
+• DigitalOcean $200 (1 Year)
+• Vultr $300 Credit ─ $12
+• Linode $1000 Old Account
+• OVH Free Trial ─ $12
+• OVH 34 vCPU ─ $15
+• UpCloud ─ $12 / $18
+• Kamatera ─ $12
+
+━━━━━━━━━━━━━━━━━━━━
+
+💼 BUSINESS
+
+✔ Long-Term Orders Accepted
+✔ Bulk Orders Available
+✔ Fast Delivery
+✔ Professional Support
+✔ Worldwide Service
+
+📩 Contact: @eva007_8
+
+🔥 IN STOCK • INSTANT DELIVERY
+
 
     elif data == "payment":
         text = """💳 PAYMENT METHODS
