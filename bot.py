@@ -1,5 +1,4 @@
 import os
-import asyncio
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 
@@ -121,7 +120,7 @@ Thank you for choosing 💎 EVA AI MARKET
     await query.edit_message_text(text)
 
 
-async def main():
+def main():
     if not BOT_TOKEN:
         raise ValueError("BOT_TOKEN environment variable is not set!")
 
@@ -131,8 +130,8 @@ async def main():
     application.add_handler(CallbackQueryHandler(buttons))
 
     print("Bot is running...")
-    await application.run_polling(drop_pending_updates=True)
+    application.run_polling(drop_pending_updates=True)
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
