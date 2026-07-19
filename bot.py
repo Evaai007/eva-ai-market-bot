@@ -1,4 +1,5 @@
 import os
+import asyncio
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 
@@ -90,11 +91,8 @@ TJCFS6hDKsEnquGuvw43krk141QLvHnGbG
 
 📢 OFFICIAL CHANNELS
 
-EVA AI MARKET
-https://t.me/evacloudhub247
-
-AWS CLOUD MARKET
-https://t.me/AWSXCLOUDEBUYSELL
+EVA AI MARKET → https://t.me/evacloudhub247
+AWS CLOUD MARKET → https://t.me/AWSXCLOUDEBUYSELL
 
 ━━━━━━━━━━━━━━━━━━━━
 
@@ -103,8 +101,7 @@ https://t.me/AWSXCLOUDEBUYSELL
 ✅ Trusted Seller
 ✅ Worldwide Service
 
-Thank you for choosing
-💎 EVA AI MARKET
+Thank you for choosing 💎 EVA AI MARKET
 """
 
     elif query.data == "contact":
@@ -121,24 +118,21 @@ Thank you for choosing
     else:
         text = "Unknown option."
 
-    # Edit the original message
-    await query.edit_message_text(text, parse_mode="HTML")
+    await query.edit_message_text(text)
 
 
-def main():
+async def main():
     if not BOT_TOKEN:
         raise ValueError("BOT_TOKEN environment variable is not set!")
 
     application = Application.builder().token(BOT_TOKEN).build()
 
-    # Handlers
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CallbackQueryHandler(buttons))
 
-    # Run the bot
-    print("🤖 EVA AI Market Bot is running...")
-    application.run_polling(drop_pending_updates=True)
+    print("Bot is running...")
+    await application.run_polling(drop_pending_updates=True)
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
