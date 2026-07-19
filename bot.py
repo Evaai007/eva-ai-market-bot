@@ -37,6 +37,7 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
 🌍 International
 ⚡ Instant Delivery
 """
+
     elif query.data == "prices":
         text = """💰 PRICE LIST
 
@@ -106,7 +107,38 @@ Thank you for choosing
 💎 EVA AI MARKET
 """
 
+    elif query.data == "contact":
+        text = """📞 Contact Us
+
+👤 Admin: @eva007_8
+
+📢 Official Channels:
+• EVA AI MARKET → https://t.me/evacloudhub247
+• AWS CLOUD MARKET → https://t.me/AWSXCLOUDEBUYSELL
+
+💬 Any query? Feel free to message the admin."""
+
     else:
         text = "Unknown option."
 
-    await query.edit_message_text(text)
+    # Edit the original message
+    await query.edit_message_text(text, parse_mode="HTML")
+
+
+def main():
+    if not BOT_TOKEN:
+        raise ValueError("BOT_TOKEN environment variable is not set!")
+
+    application = Application.builder().token(BOT_TOKEN).build()
+
+    # Handlers
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(CallbackQueryHandler(buttons))
+
+    # Run the bot
+    print("🤖 EVA AI Market Bot is running...")
+    application.run_polling(drop_pending_updates=True)
+
+
+if __name__ == "__main__":
+    main()
