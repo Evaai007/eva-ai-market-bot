@@ -56,24 +56,55 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
 • GPT Pro — 140 USDT
 """
 
-    elif query.data == "payment":
-        text = """💳 PAYMENT
+    elif data == "payment":
+    text = """💳 EVA AI MARKET
+━━━━━━━━━━━━━━━━━━━━
 
-USDT (TRC20)
+💰 PAYMENT METHODS
+
+🟢 USDT (TRC20)
 
 TJCFS6hDKsEnquGuvw43krk141QLvHnGbG
 
-After payment contact admin.
-"""
+━━━━━━━━━━━━━━━━━━━━
 
-    elif query.data == "contact":
-        text = """📞 CONTACT
+🟡 USDT (BEP20)
 
-Telegram:
+0x644ed89caecc120d3a3180e9f20a90d970cfa3e8
+
+━━━━━━━━━━━━━━━━━━━━
+
+📩 AFTER PAYMENT
+
+✔ Send Payment Screenshot
+✔ Send TXID / Transaction Hash
+✔ Mention Your Order
+
+━━━━━━━━━━━━━━━━━━━━
+
+👤 CONTACT ADMIN
+
 @eva007_8
 
-Channel:
+━━━━━━━━━━━━━━━━━━━━
+
+📢 OFFICIAL CHANNELS
+
+EVA AI MARKET
 https://t.me/evacloudhub247
+
+AWS CLOUD MARKET
+https://t.me/AWSXCLOUDEBUYSELL
+
+━━━━━━━━━━━━━━━━━━━━
+
+✅ Instant Delivery
+✅ Fast Support
+✅ Trusted Seller
+✅ Worldwide Service
+
+Thank you for choosing
+💎 EVA AI MARKET
 """
 
     else:
