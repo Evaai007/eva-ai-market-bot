@@ -37,7 +37,6 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
 🌍 International
 ⚡ Instant Delivery
 """
-
     elif query.data == "prices":
         text = """💰 PRICE LIST
 
@@ -56,8 +55,8 @@ async def buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
 • GPT Pro — 140 USDT
 """
 
-    elif data == "payment":
-    text = """💳 EVA AI MARKET
+    elif query.data == "payment":
+        text = """💳 EVA AI MARKET
 ━━━━━━━━━━━━━━━━━━━━
 
 💰 PAYMENT METHODS
@@ -111,17 +110,3 @@ Thank you for choosing
         text = "Unknown option."
 
     await query.edit_message_text(text)
-
-
-def main():
-    app = Application.builder().token(BOT_TOKEN).build()
-
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CallbackQueryHandler(buttons))
-
-    print("Bot Started...")
-    app.run_polling()
-
-
-if __name__ == "__main__":
-    main()
